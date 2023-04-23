@@ -34,6 +34,7 @@ public class Contador extends Application{
 			labelNumero.setText(Integer.toString(contador));
 			
 		});
+		// Teste
 		
 		HBox boxBotoes = new HBox();
 		boxBotoes.setAlignment(Pos.CENTER);
