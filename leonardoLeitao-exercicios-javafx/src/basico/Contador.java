@@ -56,13 +56,10 @@ public class Contador extends Application{
 		String caminhoDoCss = getClass().getResource("/basico/Contador.css").toExternalForm();
 		
 		
-		
 		Scene cenaPricipal = new Scene(boxConteudo, 400, 400);
 		
 		cenaPricipal.getStylesheets().add(caminhoDoCss);
 		cenaPricipal.getStylesheets().add("https://fonts.googleapis.com/css2?family=Oswald");
-		
-		
 		
 		
 		primaryStage.setScene(cenaPricipal);
