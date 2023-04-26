@@ -12,6 +12,20 @@ import javafx.stage.Stage;
 public class Contador extends Application{
 	
 	private int contador = 0;
+	
+	private void atulizarLabelNumero(Label label) {
+		label.setText(Integer.toString(contador));
+		
+		label.getStyleClass().remove("verde");
+		label.getStyleClass().remove("vermelho");
+		
+		if(contador > 0) {
+			label.getStyleClass().add("verde");
+		} else if(contador < 0) {
+			label.getStyleClass().add("vermelho");
+		}
+		
+	}
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -25,19 +39,19 @@ public class Contador extends Application{
 		
 		Button botaoDecremento = new  Button("-");
 		botaoDecremento.setOnAction(e -> {
-			if(contador > 0) {
-				contador--;
-			}
-			labelNumero.setText(Integer.toString(contador));
+			contador--;
+			atulizarLabelNumero(labelNumero);
 		});
+		
+		botaoDecremento.getStyleClass().add("botoes");
 		
 		Button botaoIncremento = new  Button("+");
 		botaoIncremento.setOnAction(e -> {
 			contador++;
-			labelNumero.setText(Integer.toString(contador));
-			
+			atulizarLabelNumero(labelNumero);			
 		});
-		// Teste
+		botaoIncremento.getStyleClass().add("botoes");
+		
 		
 		HBox boxBotoes = new HBox();
 		boxBotoes.setAlignment(Pos.CENTER);
