@@ -40,7 +40,8 @@ public class AppLayout extends Application {
 		//raiz = new TesteAnchorPane();
 		//raiz = new TesteBorderPane();
 		//raiz = new TesteFlowPane();
-		raiz = new TesteGridPane();
+		//raiz = new TesteGridPane();
+		raiz = new TesteStackPane();
 		//Scene principal = new Scene(new TesteAnchorPane(), 800, 600); // Foi simplificado com o raiz
 		Scene principal = new Scene(raiz, 800, 600);
 		
